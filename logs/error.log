@@ -1,0 +1,48 @@
+2022-08-04T19:43:22.826Z - error: TypeError: db.insert is not a function
+2022-08-04T19:44:23.613Z - error: TypeError: db.insert is not a function
+2022-08-04T19:45:19.618Z - error  : TypeError: db.insert is not a function
+2022-08-04T20:01:13.897Z - error  : TypeError: db.update is not a function
+2022-08-04T20:04:25.600Z - error  : TypeError: path must be absolute or specify root to res.sendFile
+2022-08-04T20:04:41.768Z - error  : TypeError: path must be absolute or specify root to res.sendFile
+2022-08-04T20:05:23.123Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\4a0f5c911bd247013ec08d8f5bb66e32.png'
+2022-08-04T20:05:24.655Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\4a0f5c911bd247013ec08d8f5bb66e32.png'
+2022-08-04T20:05:25.578Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\4a0f5c911bd247013ec08d8f5bb66e32.png'
+2022-08-04T20:08:04.125Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\4a0f5c911bd247013ec08d8f5bb66e32.png'
+2022-08-04T20:08:04.915Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\4a0f5c911bd247013ec08d8f5bb66e32.png'
+2022-08-04T20:36:07.623Z - error  : TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
+2022-08-05T06:56:12.287Z - error  : MulterError: Unexpected field
+2022-08-05T06:59:52.899Z - error  : Error: Only images are allowed
+2022-08-05T07:00:22.288Z - error  : Error: Only images are allowed
+2022-08-05T07:01:16.775Z - error  : Error: Only images are allowed
+2022-08-05T07:02:03.024Z - error  : Error: Only images are allowed
+2022-08-05T07:04:31.348Z - error  : Error: Only images are allowed
+2022-08-05T07:05:05.322Z - error  : Error: Only images are allowed
+2022-08-05T07:35:22.712Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:35:57.293Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:36:11.811Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:36:26.491Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:37:38.095Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:38:10.161Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:39:50.575Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:40:45.657Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:41:25.766Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:45:25.404Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:45:25.417Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\b7c4709135969d46adb7576bcf0a3c05'
+2022-08-05T07:45:25.423Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\b17ca4553ff410e647ef6ac736e6e4dc'
+2022-08-05T07:45:25.432Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\3fcb1933fda7fbc685241e596d3479c2'
+2022-08-05T07:45:30.436Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:48:03.858Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:48:49.048Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:49:30.627Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:49:50.253Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:50:05.852Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:50:58.505Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:52:57.276Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:53:28.937Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:54:31.918Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:55:46.491Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:56:12.274Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:57:54.352Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:58:17.432Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:58:46.794Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'
+2022-08-05T07:58:57.026Z - error  : Error: ENOENT: no such file or directory, stat 'D:\Web\Nhatrocauan\images\cce7d214ea8a2ba3d7cb0f37d58f3c3a'

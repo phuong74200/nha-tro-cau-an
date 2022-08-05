@@ -1,0 +1,33 @@
+@media (max-width: 992px) {
+    .lg-wrap {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 25%;
+    }
+
+    [images-drop] {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sm-wrap {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 40%;
+    }
+}
+
+@media (max-width: 576px) {
+    .sm-wrap {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 100%;
+    }
+}

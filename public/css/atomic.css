@@ -1,0 +1,70 @@
+.f-s-sm {
+  font-size: 0.75rem !important;
+}
+
+.f-s-none {
+  font-size: 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.g-1 {
+  gap: 1rem;
+}
+
+.g-2 {
+  gap: 2rem;
+}
+
+.w-300 {
+  width: 300px !important;
+}
+
+.w-fill {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex.d-col {
+  flex-direction: column;
+}
+
+.flex.d-row {
+  flex-direction: row;
+}
+
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
+.section {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+p {
+  margin: 0 0 1rem;
+}
+
+.shadow-37 {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.shadow-59 {
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+/*# sourceMappingURL=atomic.css.map */

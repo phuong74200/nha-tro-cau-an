@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Admin</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./css/atomic.css" />
+        <link rel="stylesheet" href="./css/admin.css" />
+        <link rel="stylesheet" href="./css/input.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+        />
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="#">upgrade your browser</a> to improve your experience.
+            </p>
+        <![endif]-->
+
+        <div class="container">
+            <div class="section flex d-col shadow-37">
+                <h2>Header</h2>
+                <div class="flex sm-wrap">
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="phone1"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="header-text-1"
+                        />
+                        <label for="phone1" class="form__label"
+                            >Số điện thoại 1</label
+                        >
+                    </div>
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="phone2"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="header-text-2"
+                        />
+                        <label for="phone2" class="form__label"
+                            >Số điện thoại 2</label
+                        >
+                    </div>
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="more"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="header-text-3"
+                        />
+                        <label for="more" class="form__label"
+                            >Tìm hiểu thêm</label
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Card</h2>
+                <div class="flex sm-wrap">
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="card-image-1"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="card-image-2"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Hình ảnh tham khảo</h2>
+                <div class="flex f-s-sm lg-wrap">
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="refer-image-1"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="refer-image-2"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="refer-image-3"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="refer-image-4"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="refer-image-5"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Dịch vụ</h2>
+                <div class="flex d-row sm-wrap">
+                    <div class="flex d-col w-fill">
+                        <div class="form__group field">
+                            <input
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service1"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-1"
+                            />
+                            <label for="service1" class="form__label"
+                                >Tên dịch vụ 1</label
+                            >
+                        </div>
+                        <div
+                            class="service-img"
+                            image-drop="image-over"
+                            page-id="service-image-1"
+                        >
+                            <input type="file" accept="image/*" />
+                            <image />
+                            <p>
+                                Kéo thả hoặc click vào đây để upload hình ảnh.
+                            </p>
+                        </div>
+                        <div class="form__group field">
+                            <textarea
+                                rows="1"
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service4"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-4"
+                            ></textarea>
+                            <label for="service4" class="form__label"
+                                >Mô tả dịch vụ 1</label
+                            >
+                        </div>
+                    </div>
+                    <div class="flex d-col w-fill">
+                        <div class="form__group field">
+                            <input
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service2"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-2"
+                            />
+                            <label for="service2" class="form__label"
+                                >Tên dịch vụ 2</label
+                            >
+                        </div>
+                        <div
+                            class="service-img"
+                            image-drop="image-over"
+                            page-id="service-image-2"
+                        >
+                            <input type="file" accept="image/*" />
+                            <image />
+                            <p>
+                                Kéo thả hoặc click vào đây để upload hình ảnh.
+                            </p>
+                        </div>
+                        <div class="form__group field">
+                            <textarea
+                                rows="1"
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service5"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-5"
+                            ></textarea>
+                            <label for="service5" class="form__label"
+                                >Mô tả dịch vụ 2</label
+                            >
+                        </div>
+                    </div>
+                    <div class="flex d-col w-fill">
+                        <div class="form__group field">
+                            <input
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service3"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-3"
+                            />
+                            <label for="service3" class="form__label"
+                                >Tên dịch vụ 3</label
+                            >
+                        </div>
+                        <div
+                            class="service-img"
+                            image-drop="image-over"
+                            page-id="service-image-3"
+                        >
+                            <input type="file" accept="image/*" />
+                            <image />
+                            <p>
+                                Kéo thả hoặc click vào đây để upload hình ảnh.
+                            </p>
+                        </div>
+                        <div class="form__group field">
+                            <textarea
+                                rows="1"
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service6"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-6"
+                            ></textarea>
+                            <label for="service6" class="form__label"
+                                >Mô tả dịch vụ 3</label
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Thư viện</h2>
+                <div class="flex wrap">
+                    <div
+                        class="lib-card video"
+                        video-drop
+                        page-id="lib-video-1"
+                    >
+                        <span class="video-title">(Chưa có video)</span>
+                        <input type="file" accept="video/*" />
+                        <video controls id="video-tag"></video>
+                        <p>Kéo thả hoặc click vào đây để upload video.</p>
+                        <div class="video-load">
+                            <div class="progress-border">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="lib-card video"
+                        video-drop
+                        page-id="lib-video-2"
+                    >
+                        <span class="video-title">(Chưa có video)</span>
+                        <input type="file" accept="video/*" />
+                        <video controls id="video-tag"></video>
+                        <p>Kéo thả hoặc click vào đây để upload video.</p>
+                        <div class="video-load">
+                            <div class="progress-border">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="lib-card video"
+                        video-drop
+                        page-id="lib-video-3"
+                    >
+                        <span class="video-title">(Chưa có video)</span>
+                        <input type="file" accept="video/*" />
+                        <video controls id="video-tag"></video>
+                        <p>Kéo thả hoặc click vào đây để upload video.</p>
+                        <div class="video-load">
+                            <div class="progress-border">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="lib-card video"
+                        video-drop
+                        page-id="lib-video-4"
+                    >
+                        <span class="video-title">(Chưa có video)</span>
+                        <input type="file" accept="video/*" />
+                        <video controls id="video-tag"></video>
+                        <p>Kéo thả hoặc click vào đây để upload video.</p>
+                        <div class="video-load">
+                            <div class="progress-border">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="lib-card video"
+                        video-drop
+                        page-id="lib-video-5"
+                    >
+                        <span class="video-title">(Chưa có video)</span>
+                        <input type="file" accept="video/*" />
+                        <video controls id="video-tag"></video>
+                        <p>Kéo thả hoặc click vào đây để upload video.</p>
+                        <div class="video-load">
+                            <div class="progress-border">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Thư viện ảnh</h2>
+                <div class="flex">
+                    <div
+                        class="card mult"
+                        images-drop
+                        page-id="gallery-images-1"
+                    >
+                        <input type="file" accept="image/*" multiple />
+                        <div class="image-container"></div>
+                        <p>
+                            Kéo thả hoặc click vào đây để upload 1 (hoặc nhiều)
+                            hình ảnh.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Hướng dẫn đi đường</h2>
+                <div class="flex wrap">
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="more"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="way-text-1"
+                        />
+                        <label for="more" class="form__label">Địa chỉ 1</label>
+                    </div>
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="more"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="way-text-2"
+                        />
+                        <label for="more" class="form__label">Địa chỉ 2</label>
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Giới thiệu</h2>
+                <div class="flex wrap">
+                    <div class="form__group field">
+                        <textarea
+                            rows="1"
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="description"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="about-text-1"
+                        ></textarea>
+                        <label for="description" class="form__label"
+                            >Mô tả</label
+                        >
+                    </div>
+                </div>
+                <div class="flex f-s-sm">
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="about-image-1"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="about-image-2"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Footer</h2>
+                <div class="form__group field">
+                    <input
+                        type="input"
+                        class="form__field"
+                        placeholder="Name"
+                        name="name"
+                        id="facebook"
+                        required
+                        autocomplete="off"
+                        list="autocompleteOff"
+                        page-id="footer-text-1"
+                    />
+                    <label for="facebook" class="form__label"
+                        >Liên kết facebook</label
+                    >
+                </div>
+                <div class="flex sm-wrap">
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="phone3"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="footer-text-2"
+                        />
+                        <label for="phone3" class="form__label"
+                            >Số điện thoại 1</label
+                        >
+                    </div>
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="phone4"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="footer-text-3"
+                        />
+                        <label for="phone4" class="form__label"
+                            >Số điện thoại 2</label
+                        >
+                    </div>
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="phone5"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="footer-text-4"
+                        />
+                        <label for="phone5" class="form__label"
+                            >Số điện thoại 3</label
+                        >
+                    </div>
+                </div>
+            </div>
+            <button class="btn shadow-37" id="save">LƯU TRANG</button>
+        </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/toastify-js"
+        ></script>
+        <script src="./js/file-upload.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/image-drag-drop.js"></script>
+        <script src="./js/mult-image.js"></script>
+        <script src="./js/video-drag-drop.js"></script>
+        <script src="./js/auto-textarea.js"></script>
+        <script src="./js/text-fields.js"></script>
+    </body>
+</html>
