@@ -1,641 +1,558 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="./img/Logo/Logo-removebg-preview.png" />
-        <link rel="stylesheet" href="./styleindex.css" />
+        <title>Admin</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./css/atomic.css" />
+        <link rel="stylesheet" href="./css/admin.css" />
+        <link rel="stylesheet" href="./css/input.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
         />
-
-        <!-- ---------------------------LINK CDN----------------------------------- -->
-
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-
-        <title>Nhà Trọ Cầu An</title>
     </head>
-
     <body>
-        <!-------------------------- NAVIGATION BAR ------------------------->
-        <div class="menu">
-            <div class="leftMenu">
-                <img src="./img/Logo/Logo.jpg" alt="Cầu An Logo" />
-            </div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="#">upgrade your browser</a> to improve your experience.
+            </p>
+        <![endif]-->
 
-            <div class="middleMenu">
-                <a href="#">trang chủ</a>
-                <a href="#dichvu">dịch vụ</a>
-                <a href="#danhgia">đánh giá</a>
-                <a href="#thongtin">thông tin</a>
-            </div>
-
-            <div class="rightMenu">
-                <div class="direction">
-                    <a
-                        href="https://www.facebook.com/Nh%C3%A0-Tr%E1%BB%8D-C%E1%BA%A7u-An-r%E1%BA%A5t-g%E1%BA%A7n-B%E1%BB%87nh-Vi%E1%BB%87n-Ung-B%C6%B0%E1%BB%9Bu-c%C6%A1-s%E1%BB%9F-2-Q9-105940508673782"
-                        target="_blank"
-                    >
-                        <i
-                            class="fa-brands fa-facebook-square fa-2x fa-bounce tooltip"
-                            style="
-                                --fa-bounce-height: 0px;
-                                --fa-animation-duration: 2s;
-                            "
+        <div class="container">
+            <div class="section flex d-col shadow-37">
+                <h2>Header</h2>
+                <div class="flex sm-wrap">
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="phone1"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="header-text-1"
+                        />
+                        <label for="phone1" class="form__label"
+                            >Số điện thoại 1</label
                         >
-                            <span class="tooltiptext" style="font-weight: 700"
-                                >Facebook</span
-                            >
-                        </i>
-                    </a>
-
-                    <a
-                        href="https://www.foody.vn/"
-                        target="_blank"
-                        style="
-                            --fa-bounce-height: 0px;
-                            --fa-animation-duration: 2s;
-                        "
-                    >
-                        <i class="fa-solid fa-utensils fa-2x fa-bounce tooltip">
-                            <span class="tooltiptext" style="font-weight: 700"
-                                >Foody</span
-                            >
-                        </i>
-                    </a>
-
-                    <a href="#chiduong">
-                        <i
-                            class="fa-solid fa-diamond-turn-right fa-2x fa-bounce tooltip"
-                            style="
-                                --fa-bounce-height: 0px;
-                                --fa-animation-duration: 2s;
-                            "
-                        >
-                            <span class="tooltiptext" style="font-weight: 700"
-                                >Chỉ đường</span
-                            >
-                        </i>
-                    </a>
-
-                    <a
-                        href="https://www.tiktok.com/"
-                        target="_blank"
-                        style="
-                            --fa-bounce-height: 0px;
-                            --fa-animation-duration: 2s;
-                        "
-                    >
-                        <i class="fa-brands fa-tiktok fa-2x fa-bounce tooltip">
-                            <span class="tooltiptext" style="font-weight: 700"
-                                >TikTok</span
-                            >
-                        </i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-------------------------- BODY CONTENT ------------------------->
-        <div class="bodyContent">
-            <div class="middleBody">
-                <div class="middleBodyTop">
-                    <div class="headLine">
-                        <div></div>
-                        <div class="BigLogo" style="object-fit: contain">
-                            <img
-                                src="./img/Logo/Logo.jpg"
-                                alt="LOGO"
-                                style="width: 100%; height: 100%"
-                            />
-                        </div>
-                        <div style="padding: 70px">
-                            <h1
-                                style="
-                                    font-size: 4.5em;
-                                    color: #00d17d;
-                                    text-shadow: 0 1px 0 #4a4a4e,
-                                        -1px -1px 0 #4a4a4e,
-                                        /*main 3d shadow*/ -1px 0px 0 #343437,
-                                        -2px 1px 0 #343437, -3px 2px 0 #313134,
-                                        -4px 3px 0 #2f2f31, -5px 4px 0 #2c2c2f,
-                                        -6px 5px 0 #2a2a2c, -7px 6px 0 #27272a,
-                                        0 -1px 1px white, 0 -2px 0px white,
-                                        /*bottom left corner*/ -15px 14px 0px white,
-                                        -16px 15px 0px white,
-                                        -17px 16px 0px white,
-                                        -18px 17px 0px white, -2px -1px 0 white,
-                                        -3px 0px 0 white,
-                                        /*top left corner*/ -19px 15px 0 white,
-                                        -18px 14px 0 white, -17px 13px 0 white,
-                                        -16px 12px 0 white, -15px 11px 0 white,
-                                        -14px 10px 0 white, -13px 9px 0 white,
-                                        -12px 8px 0 white, -11px 7px 0 white,
-                                        -10px 6px 0 white, -9px 5px 0 white,
-                                        -8px 4px 0 white, -7px 3px 0 white,
-                                        -6px 2px 0 white, -5px 1px 0 white,
-                                        -4px 0px 0 white,
-                                        /*lower right / (upper right side for capital T like H etc letters. */
-                                            0px 2px 0px white,
-                                        -1px 3px 0px white, -2px 4px 0px white,
-                                        -3px 5px 0px white;
-                                "
-                                class="cauan"
-                            >
-                                CẦU AN
-                            </h1>
-
-                            <div class="slogan">
-                                <p
-                                    style="
-                                        font-size: 2.64em;
-                                        font-weight: 700;
-                                        color: #3885ff;
-                                        text-shadow: 0 1px 0 #4a4a4e,
-                                            -1px -1px 0 #4a4a4e,
-                                            /*main 3d shadow*/ -1px 0px 0 #343437,
-                                            -2px 1px 0 #343437,
-                                            -3px 2px 0 #313134,
-                                            -4px 3px 0 #2f2f31,
-                                            -5px 4px 0 #2c2c2f;
-                                    "
-                                >
-                                    LUÔN ĐỒNG HÀNH CÙNG NGƯỜI BỆNH
-                                </p>
-                                <br />
-                            </div>
-
-                            <br />
-                            <div class="button4More">
-                                <a href="tel:0822 070 078">
-                                    <button
-                                        class="button"
-                                        role="button"
-                                        style="padding: 20px 16px"
-                                    >
-                                        <i
-                                            class="fa-solid fa-phone"
-                                            style="padding-right: 10px"
-                                        ></i>
-                                        <t page-id="header-text-1"
-                                            >0822-070-078</t
-                                        >
-                                    </button>
-                                </a>
-                                <a href="tel:0793 007 078">
-                                    <button
-                                        class="button"
-                                        role="button"
-                                        style="
-                                            padding: 20px 16px;
-                                            background-color: #53b9ff;
-                                        "
-                                    >
-                                        <i
-                                            class="fa-solid fa-phone"
-                                            style="padding-right: 10px"
-                                        ></i>
-                                        <t page-id="header-text-2"
-                                            >0793-007-078</t
-                                        >
-                                    </button>
-                                </a>
-                                <a href="#thongtin">
-                                    <button
-                                        class="button"
-                                        role="button"
-                                        style="
-                                            padding: 20px 16px;
-                                            background-color: #2df2a7;
-                                        "
-                                    >
-                                        <i
-                                            class="fa-solid fa-magnifying-glass"
-                                            style="padding-right: 10px"
-                                        ></i>
-                                        <t page-id="header-text-3"
-                                            >Tìm hiểu thêm</t
-                                        >
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                        <div></div>
                     </div>
-
-                    <div class="imgBodyTop">
-                        <div>
-                            <img
-                                src="./img/cardVisit.jpg"
-                                alt="Card"
-                                page-id="card-image-1"
-                            />
-                        </div>
-
-                        <div>
-                            <img
-                                src="./img/map.jpg"
-                                alt="Map"
-                                page-id="card-image-2"
-                            />
-                        </div>
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="phone2"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="header-text-2"
+                        />
+                        <label for="phone2" class="form__label"
+                            >Số điện thoại 2</label
+                        >
+                    </div>
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="more"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="header-text-3"
+                        />
+                        <label for="more" class="form__label"
+                            >Tìm hiểu thêm</label
+                        >
                     </div>
                 </div>
-
-                <div class="middleBodyMid">
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Card</h2>
+                <div class="flex sm-wrap">
                     <div
-                        class="slider-container reveal fade-bottom"
-                        style="padding-top: 20%"
+                        class="card"
+                        image-drop="image-over"
+                        page-id="card-image-1"
                     >
-                        <div
-                            style="display: flex; justify-content: center"
-                            class="reveal fade-bottom"
-                        >
-                            <h1>HÌNH ẢNH THAM KHẢO</h1>
-                        </div>
-                        <div class="slider-content">
-                            <div class="slider-single">
-                                <img
-                                    class="slider-single-image imgCarousel"
-                                    src="./img/20220101_152809.jpg"
-                                    alt="1"
-                                    page-id="refer-image-1"
-                                />
-                            </div>
-
-                            <div class="slider-single">
-                                <img
-                                    class="slider-single-image imgCarousel"
-                                    src="./img/20220101_153934.jpg"
-                                    alt="2"
-                                    page-id="refer-image-2"
-                                />
-                            </div>
-
-                            <div class="slider-single">
-                                <img
-                                    class="slider-single-image imgCarousel"
-                                    src="./img/room.jpg"
-                                    alt="3"
-                                    page-id="refer-image-3"
-                                />
-                            </div>
-
-                            <div class="slider-single">
-                                <img
-                                    class="slider-single-image imgCarousel"
-                                    src="./img/20220110_153530.jpg"
-                                    alt="4"
-                                    page-id="refer-image-4"
-                                />
-                            </div>
-
-                            <div class="slider-single">
-                                <img
-                                    class="slider-single-image imgCarousel"
-                                    src="./img/map.jpg"
-                                    alt="5"
-                                    page-id="refer-image-5"
-                                />
-                            </div>
-
-                            <div class="slider-single">
-                                <img
-                                    class="slider-single-image imgCarousel"
-                                    src="./img/20220101_152809.jpg"
-                                    alt="6"
-                                    page-id="refer-image-6"
-                                />
-                            </div>
-                        </div>
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
                     </div>
-
-                    <div class="middleBodyMid2">
-                        <div></div>
-
-                        <div class="middleBodyMid2_Content" id="dichvu">
-                            <div
-                                style="
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: flex-end;
-                                "
-                                class="reveal fade-bottom"
-                            >
-                                <h1>DỊCH VỤ</h1>
-                            </div>
-
-                            <div class="mbm2_left1 reveal fade-left">
-                                <div class="left_box2">
-                                    <div class="left">
-                                        <img
-                                            src="./img/RiceBowl.png"
-                                            alt="Rice Bowl"
-                                            page-id="service-image-1"
-                                        />
-                                    </div>
-
-                                    <div class="right">
-                                        <h2 page-id="service-text-4">
-                                            Bình dân <br />
-                                            Ngon miệng <br />
-                                            Sạch sẽ
-                                        </h2>
-                                    </div>
-                                </div>
-                                <div
-                                    class="serviceName"
-                                    page-id="service-text-1"
-                                >
-                                    BÁN CƠM
-                                </div>
-                            </div>
-
-                            <div class="mbm2_right1 reveal fade-right">
-                                <div
-                                    class="serviceName"
-                                    page-id="service-text-2"
-                                >
-                                    BÁN NƯỚC
-                                </div>
-
-                                <div class="left_box1">
-                                    <div class="left">
-                                        <img
-                                            src="./img/soft-drinks.png"
-                                            alt="Drinks"
-                                            page-id="service-image-2"
-                                        />
-                                    </div>
-
-                                    <div class="right">
-                                        <h2 page-id="service-text-5">
-                                            Nước ngọt <br />
-                                            Rau má <br />
-                                            Nước mía <br />
-                                            Cà phê <br />
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mbm2_left2 reveal fade-left">
-                                <div class="right_box1">
-                                    <div class="left">
-                                        <img
-                                            src="./img/bubble-tea.png"
-                                            alt="Milk Tea"
-                                            page-id="service-image-3"
-                                        />
-                                    </div>
-
-                                    <div class="right">
-                                        <h2 page-id="service-text-6">
-                                            Chưa mở
-                                        </h2>
-                                    </div>
-                                </div>
-                                <div
-                                    class="serviceName"
-                                    page-id="service-text-3"
-                                >
-                                    TRÀ SỮA
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="padding-top: 24vh">
-                        <div
-                            style="
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            "
-                            class="reveal fade-bottom"
-                        >
-                            <h1>THƯ VIỆN</h1>
-                        </div>
-                        <div class="vidContent">
-                            <div class="videoLine1">
-                                <video
-                                    src="./video/20220101_153004.mp4"
-                                    controls
-                                    class="reveal fade-left"
-                                    page-id="lib-video-1"
-                                ></video>
-                                <video
-                                    src="./video/20220101_153004.mp4"
-                                    controls
-                                    class="reveal fade-bottom"
-                                    page-id="lib-video-2"
-                                ></video>
-                                <video
-                                    src="./video/20220101_153004.mp4"
-                                    controls
-                                    class="reveal fade-right"
-                                    page-id="lib-video-3"
-                                ></video>
-                            </div>
-                            <div class="videoLine2">
-                                <video
-                                    src="./video/7507328039451392504.mp4"
-                                    controls
-                                    class="reveal fade-left"
-                                    page-id="lib-video-4"
-                                ></video>
-                                <video
-                                    src="./video/7507328039451392504.mp4"
-                                    controls
-                                    class="reveal fade-right"
-                                    page-id="lib-video-5"
-                                ></video>
-                            </div>
-                            <div class="gallery" page-id="gallery-images-1">
-                                <img src="./img/20220101_153934.jpg" alt="" />
-                                <img src="./img/20220101_153934.jpg" alt="" />
-                                <img src="./img/20220101_153934.jpg" alt="" />
-                                <img src="./img/20220101_153934.jpg" alt="" />
-                                <img src="./img/20220101_153934.jpg" alt="" />
-                                <img src="./img/20220101_153934.jpg" alt="" />
-                                <img src="./img/20220101_153934.jpg" alt="" />
-                                <img src="./img/20220101_153934.jpg" alt="" />
-                                <img src="./img/20220101_153934.jpg" alt="" />
-                                <img src="./img/20220101_153934.jpg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="middleBodyBot" id="chiduong">
-            <div
-                style="justify-content: center; height: 160px; display: flex"
-                class="reveal fade-bottom"
-            >
-                <div style="display: flex; align-items: center">
-                    <h1>HƯỚNG DẪN ĐI ĐƯỜNG</h1>
-                </div>
-            </div>
-            <div class="googleMap">
-                <!-- <div></div> -->
-
-                <div class="location">
                     <div
-                        class="s1_box"
-                        style="
-                            padding-left: 32px;
-                            padding-right: 32px;
-                            line-height: 1.6;
-                        "
+                        class="card"
+                        image-drop="image-over"
+                        page-id="card-image-2"
                     >
-                        <h3 style="font-size: 27px">Địa chỉ</h3>
-                        <br />
-                        <p page-id="way-text-1">
-                            Cũ : 10 đường 225, Phường Long Thạnh Mỹ, Quận 9,
-                            TP.HCM
-                        </p>
-                        <br page-id="way-text-2" />
-                        <p>Mới : 10 đường 225, Phường Tân Phú, TP.Thủ Đức</p>
-
-                        <br />
-                        <a
-                            href="https://www.google.com/maps/dir//40+%C4%91%C6%B0%E1%BB%9Dng+225A,+Long+Th%E1%BA%A1nh+M%E1%BB%B9,+Qu%E1%BA%ADn+9,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam/@10.8693199,106.8085814,18.99z/data=!4m8!4m7!1m0!1m5!1m1!1s0x31752757dbe6fcf5:0xb44cbfcde9a7280d!2m2!1d106.8079361!2d10.869951"
-                            target="_blank"
-                        >
-                            <button
-                                class="button"
-                                style="background-color: #2df2a7"
-                                role="button"
-                            >
-                                Dẫn đường
-                            </button>
-                        </a>
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
                     </div>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d475.7491192299477!2d106.8080159310926!3d10.869796238726918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752757da6562cf%3A0x7f938cc48654842!2zMTAgxJDGsOG7nW5nIDIyNSwgTG9uZyBUaOG6oW5oIE3hu7ksIFF14bqtbiA5LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e1!3m2!1sen!2s!4v1657971853629!5m2!1sen!2s"
-                        height="450"
-                        style="border: 0; width: 100%"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    >
-                    </iframe>
                 </div>
-                <!-- <div></div> -->
             </div>
-        </div>
-
-        <!-------------------------- FOOTER ------------------------->
-        <div class="footer">
-            <div class="feedbackContainer" id="danhgia">
-                <div
-                    style="
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    "
-                    class="reveal fade-bottom"
-                >
-                    <div>
-                        <h1>GIỚI THIỆU</h1>
+            <div class="section flex d-col shadow-37">
+                <h2>Hình ảnh tham khảo</h2>
+                <div class="flex f-s-sm lg-wrap">
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="refer-image-1"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="refer-image-2"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="refer-image-3"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="refer-image-4"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="refer-image-5"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
                     </div>
                 </div>
-
-                <div class="feedbackBox">
-                    <div></div>
-                    <div class="feedbackBoxContent reveal fade-bottom">
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Dịch vụ</h2>
+                <div class="flex d-row sm-wrap">
+                    <div class="flex d-col w-fill">
+                        <div class="form__group field">
+                            <input
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service1"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-1"
+                            />
+                            <label for="service1" class="form__label"
+                                >Tên dịch vụ 1</label
+                            >
+                        </div>
                         <div
-                            class="feedback1"
-                            style="border-radius: 60px 0px 0px 60px"
+                            class="service-img"
+                            image-drop="image-over"
+                            page-id="service-image-1"
                         >
-                            <div class="comment1">
-                                <h2 page-id="about-text-1">
-                                    Phòng ốc rộng rãi và có chỗ để xe, đồ ăn vừa
-                                    miệng hợp với giá tiền bình dân, có cả nước
-                                    uống và cà phê !!!
-                                </h2>
+                            <input type="file" accept="image/*" />
+                            <image />
+                            <p>
+                                Kéo thả hoặc click vào đây để upload hình ảnh.
+                            </p>
+                        </div>
+                        <div class="form__group field">
+                            <textarea
+                                rows="1"
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service4"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-4"
+                            ></textarea>
+                            <label for="service4" class="form__label"
+                                >Mô tả dịch vụ 1</label
+                            >
+                        </div>
+                    </div>
+                    <div class="flex d-col w-fill">
+                        <div class="form__group field">
+                            <input
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service2"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-2"
+                            />
+                            <label for="service2" class="form__label"
+                                >Tên dịch vụ 2</label
+                            >
+                        </div>
+                        <div
+                            class="service-img"
+                            image-drop="image-over"
+                            page-id="service-image-2"
+                        >
+                            <input type="file" accept="image/*" />
+                            <image />
+                            <p>
+                                Kéo thả hoặc click vào đây để upload hình ảnh.
+                            </p>
+                        </div>
+                        <div class="form__group field">
+                            <textarea
+                                rows="1"
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service5"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-5"
+                            ></textarea>
+                            <label for="service5" class="form__label"
+                                >Mô tả dịch vụ 2</label
+                            >
+                        </div>
+                    </div>
+                    <div class="flex d-col w-fill">
+                        <div class="form__group field">
+                            <input
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service3"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-3"
+                            />
+                            <label for="service3" class="form__label"
+                                >Tên dịch vụ 3</label
+                            >
+                        </div>
+                        <div
+                            class="service-img"
+                            image-drop="image-over"
+                            page-id="service-image-3"
+                        >
+                            <input type="file" accept="image/*" />
+                            <image />
+                            <p>
+                                Kéo thả hoặc click vào đây để upload hình ảnh.
+                            </p>
+                        </div>
+                        <div class="form__group field">
+                            <textarea
+                                rows="1"
+                                type="input"
+                                class="form__field"
+                                placeholder="Name"
+                                name="name"
+                                id="service6"
+                                required
+                                autocomplete="off"
+                                list="autocompleteOff"
+                                page-id="service-text-6"
+                            ></textarea>
+                            <label for="service6" class="form__label"
+                                >Mô tả dịch vụ 3</label
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Thư viện</h2>
+                <div class="flex wrap">
+                    <div
+                        class="lib-card video"
+                        video-drop
+                        page-id="lib-video-1"
+                    >
+                        <span class="video-title">(Chưa có video)</span>
+                        <input type="file" accept="video/*" />
+                        <video controls id="video-tag"></video>
+                        <p>Kéo thả hoặc click vào đây để upload video.</p>
+                        <div class="video-load">
+                            <div class="progress-border">
+                                <div class="progress"></div>
                             </div>
                         </div>
-                        <div class="feedback2">
-                            <img src="./img/20220110_154448.jpg" alt="" />
-                        </div>
-                        <div
-                            class="feedback3"
-                            style="border-radius: 0px 60px 60px 0px"
-                        >
-                            <img src="./img/20220110_153530.jpg" alt="" />
+                    </div>
+                    <div
+                        class="lib-card video"
+                        video-drop
+                        page-id="lib-video-2"
+                    >
+                        <span class="video-title">(Chưa có video)</span>
+                        <input type="file" accept="video/*" />
+                        <video controls id="video-tag"></video>
+                        <p>Kéo thả hoặc click vào đây để upload video.</p>
+                        <div class="video-load">
+                            <div class="progress-border">
+                                <div class="progress"></div>
+                            </div>
                         </div>
                     </div>
-                    <div></div>
+                    <div
+                        class="lib-card video"
+                        video-drop
+                        page-id="lib-video-3"
+                    >
+                        <span class="video-title">(Chưa có video)</span>
+                        <input type="file" accept="video/*" />
+                        <video controls id="video-tag"></video>
+                        <p>Kéo thả hoặc click vào đây để upload video.</p>
+                        <div class="video-load">
+                            <div class="progress-border">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="lib-card video"
+                        video-drop
+                        page-id="lib-video-4"
+                    >
+                        <span class="video-title">(Chưa có video)</span>
+                        <input type="file" accept="video/*" />
+                        <video controls id="video-tag"></video>
+                        <p>Kéo thả hoặc click vào đây để upload video.</p>
+                        <div class="video-load">
+                            <div class="progress-border">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="lib-card video"
+                        video-drop
+                        page-id="lib-video-5"
+                    >
+                        <span class="video-title">(Chưa có video)</span>
+                        <input type="file" accept="video/*" />
+                        <video controls id="video-tag"></video>
+                        <p>Kéo thả hoặc click vào đây để upload video.</p>
+                        <div class="video-load">
+                            <div class="progress-border">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div></div>
             </div>
-
-            <div class="contact" id="thongtin">
-                <div class="middleFooter">
-                    <div class="s1">
-                        <div class="moreLinking">
-                            <iframe
-                                page-id="footer-text-1"
-                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100077834836000&tabs=timeline&width=400&height=450&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-                                width="400"
-                                height="480"
-                                style="border-radius: 6px; overflow: hidden"
-                                scrolling="no"
-                                frameborder="0"
-                                allowfullscreen="true"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                            ></iframe>
-                        </div>
-                        <!-- <a href="./login.html">ADMIN CONTROL</a> -->
-                    </div>
-
-                    <div class="s2" style="text-align: center">
-                        <h3 class="" style="font-size: 27px">Điện thoại</h3>
-                        <br />
+            <div class="section flex d-col shadow-37">
+                <h2>Thư viện ảnh</h2>
+                <div class="flex">
+                    <div
+                        class="card mult"
+                        images-drop
+                        page-id="gallery-images-1"
+                    >
+                        <input type="file" accept="image/*" multiple />
+                        <div class="image-container"></div>
                         <p>
-                            <a page-id="footer-text-2" href="tel:0812 188 079"
-                                >0812 188 079</a
-                            ><br />
-                            <a page-id="footer-text-3" href="tel:0793 007 078"
-                                >0793 007 078</a
-                            ><br />
-                            <a page-id="footer-text-4" href="tel:0822 070 078"
-                                >0822 070 078</a
-                            ><br />
+                            Kéo thả hoặc click vào đây để upload 1 (hoặc nhiều)
+                            hình ảnh.
                         </p>
-                    </div>
-                    <div class="s3">
-                        <div>
-                            <h3 class="" style="font-size: 27px">
-                                Giờ làm việc
-                            </h3>
-                            <br />
-                            <p>Th 2: Mở cửa cả ngày</p>
-                            <p>Th 3: Mở cửa cả ngày</p>
-                            <p>Th 4: Mở cửa cả ngày</p>
-                            <p>Th 5: Mở cửa cả ngày</p>
-                            <p>Th 6: Mở cửa cả ngày</p>
-                            <p>Th 7: Mở cửa cả ngày</p>
-                            <p>CN: Mở cửa cả ngày</p>
-                        </div>
                     </div>
                 </div>
             </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Hướng dẫn đi đường</h2>
+                <div class="flex wrap">
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="more"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="way-text-1"
+                        />
+                        <label for="more" class="form__label">Địa chỉ 1</label>
+                    </div>
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="more"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="way-text-2"
+                        />
+                        <label for="more" class="form__label">Địa chỉ 2</label>
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Giới thiệu</h2>
+                <div class="flex wrap">
+                    <div class="form__group field">
+                        <textarea
+                            rows="1"
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="description"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="about-text-1"
+                        ></textarea>
+                        <label for="description" class="form__label"
+                            >Mô tả</label
+                        >
+                    </div>
+                </div>
+                <div class="flex f-s-sm">
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="about-image-1"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                    <div
+                        class="card"
+                        image-drop="image-over"
+                        page-id="about-image-2"
+                    >
+                        <input type="file" accept="image/*" />
+                        <image />
+                        <p>Kéo thả hoặc click vào đây để upload hình ảnh.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section flex d-col shadow-37">
+                <h2>Footer</h2>
+                <div class="form__group field">
+                    <input
+                        type="input"
+                        class="form__field"
+                        placeholder="Name"
+                        name="name"
+                        id="facebook"
+                        required
+                        autocomplete="off"
+                        list="autocompleteOff"
+                        page-id="footer-text-1"
+                    />
+                    <label for="facebook" class="form__label"
+                        >Liên kết facebook</label
+                    >
+                </div>
+                <div class="flex sm-wrap">
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="phone3"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="footer-text-2"
+                        />
+                        <label for="phone3" class="form__label"
+                            >Số điện thoại 1</label
+                        >
+                    </div>
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="phone4"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="footer-text-3"
+                        />
+                        <label for="phone4" class="form__label"
+                            >Số điện thoại 2</label
+                        >
+                    </div>
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="phone5"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="footer-text-4"
+                        />
+                        <label for="phone5" class="form__label"
+                            >Số điện thoại 3</label
+                        >
+                    </div>
+                </div>
+            </div>
+            <button class="btn shadow-37" id="save">LƯU TRANG</button>
         </div>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="./appindex.js"></script>
-        <script src="./js/user-load.js"></script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/toastify-js"
+        ></script>
+        <script src="./js/file-upload.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/image-drag-drop.js"></script>
+        <script src="./js/mult-image.js"></script>
+        <script src="./js/video-drag-drop.js"></script>
+        <script src="./js/auto-textarea.js"></script>
+        <script src="./js/text-fields.js"></script>
     </body>
 </html>

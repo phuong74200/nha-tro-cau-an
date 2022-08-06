@@ -10,7 +10,7 @@ const db = {};
 db.page = new DataStore('./db/page.db');
 db.page.loadDatabase();
 
-app.use(express.static('public'));
+app.use(express.static('admin'));
 app.use(express.json());
 
 const image = multer({
@@ -261,4 +261,4 @@ app.use((err, req, res, next) => {
         })
 })
 
-app.listen(3000);
+app.listen(443);
