@@ -10,7 +10,7 @@ const db = {};
 db.page = new DataStore('./db/page.db');
 db.page.loadDatabase();
 
-app.use(express.static('admin'));
+app.use(express.static('public'));
 app.use(express.json());
 
 const image = multer({
