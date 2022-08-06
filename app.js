@@ -13,6 +13,20 @@ db.page.loadDatabase();
 app.use(express.static('public'));
 app.use(express.json());
 
+app.use((req, res, next) => {
+    log(req.method + ' ' + req.originalUrl);
+    const token = req.headers.authorization;
+    if (token == '123') {
+        return next();
+    }
+    return res.status(403).json({
+        code: 400,
+        data: {
+            message: 'unauthorized'
+        }
+    });
+});
+
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -72,20 +86,6 @@ app.get('/api/page', (req, res) => {
         })
     })
 })
-
-app.use((req, res, next) => {
-    log(req.method + ' ' + req.originalUrl);
-    const token = req.headers.authorization;
-    if (token == '123') {
-        return next();
-    }
-    return res.status(403).json({
-        code: 400,
-        data: {
-            message: 'unauthorized'
-        }
-    });
-});
 
 app.post('/api/page/image', image.single('image'), (req, res) => {
     const file = req.file;
