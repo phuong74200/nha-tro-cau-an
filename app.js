@@ -1,7 +1,14 @@
 const express = require('express');
 const app = express();
+const https = require('https');
+const fs = require('fs');
 const multer = require('multer');
 const { log, error } = require('./utils/logger');
+
+const privateKey = fs.readFileSync('sslcert/server.key', 'utf8');
+const certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+
+const credentials = { key: privateKey, cert: certificate };
 
 const DataStore = require('nedb');
 
@@ -267,4 +274,5 @@ app.use((err, req, res, next) => {
         })
 })
 
-app.listen(443);
+const httpsServer = https.createServer(credentials, app);
+httpsServer.listen(443);
