@@ -10,6 +10,12 @@ const db = {};
 db.page = new DataStore('./db/page.db');
 db.page.loadDatabase();
 
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
+    next();
+});
+
 app.use(express.static('public'));
 app.use(express.json());
 
@@ -25,12 +31,6 @@ app.use((req, res, next) => {
             message: 'unauthorized'
         }
     });
-});
-
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
 });
 
 const image = multer({
