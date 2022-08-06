@@ -19,20 +19,6 @@ app.use(function (req, res, next) {
 app.use(express.static('public'));
 app.use(express.json());
 
-app.use((req, res, next) => {
-    log(req.method + ' ' + req.originalUrl);
-    const token = req.headers.authorization;
-    if (token == '123') {
-        return next();
-    }
-    return res.status(403).json({
-        code: 400,
-        data: {
-            message: 'unauthorized'
-        }
-    });
-});
-
 const image = multer({
     dest: 'images/',
     fileFilter: (req, file, cb) => {
@@ -86,6 +72,20 @@ app.get('/api/page', (req, res) => {
         })
     })
 })
+
+app.use((req, res, next) => {
+    log(req.method + ' ' + req.originalUrl);
+    const token = req.headers.authorization;
+    if (token == '123') {
+        return next();
+    }
+    return res.status(403).json({
+        code: 400,
+        data: {
+            message: 'unauthorized'
+        }
+    });
+});
 
 app.post('/api/page/image', image.single('image'), (req, res) => {
     const file = req.file;
