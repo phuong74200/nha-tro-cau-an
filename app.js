@@ -39,7 +39,12 @@ const image = multer({
 const video = multer({ dest: 'videos/' });
 
 app.get('/', (req, res) => {
-    res.send('Hello World! - Winston logged');
+    res.status(500).json({
+        code: 500,
+        data: {
+            message: 'internal server error'
+        }
+    });
 });
 
 app.get('/image/:image_id', (req, res) => {
