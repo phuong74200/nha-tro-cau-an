@@ -18,13 +18,14 @@ db.page = new DataStore('./db/page.db');
 db.page.loadDatabase();
 
 app.use(function (req, res, next) {
+    log(req.method + ' ' + req.originalUrl);
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "*");
     next();
 });
 
-app.use('/admin', express.static('public/admin'));
 app.use(express.json());
+app.use('/admin', express.static('public/admin'));
 
 const image = multer({
     dest: 'images/',
@@ -86,7 +87,6 @@ app.get('/api/page', (req, res) => {
 })
 
 app.use((req, res, next) => {
-    log(req.method + ' ' + req.originalUrl);
     const token = req.headers.authorization;
     if (token == '123') {
         return next();
