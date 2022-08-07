@@ -25,9 +25,7 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.json());
-app.use('/admin', (req, res) => {
-    res.send('hello world');
-});
+app.use('/admin', express.static('public/admin'));
 
 const image = multer({
     dest: 'images/',
@@ -282,4 +280,4 @@ app.use((err, req, res, next) => {
 })
 
 const httpsServer = https.createServer(credentials, app);
-httpsServer.listen(80);
+httpsServer.listen(443);
