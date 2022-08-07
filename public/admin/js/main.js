@@ -29,6 +29,11 @@ const toast = (message, type = 'normal') => {
 
 const saveStack = {};
 
+$('#logout').on('click', () => {
+    document.cookie = 'admin_token' + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    window.location.replace('/login');
+})
+
 $('#save').on('click', (e) => {
     axios.post('/api/page/text', { saveStack: Object.entries(saveStack) }, { headers: { authorization: '123' } }).then((res) => {
         if (res.data.code == 200) {

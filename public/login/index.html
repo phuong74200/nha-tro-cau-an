@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="section p-none flex d-col pos-relative">
+                <h1 class="outbox">Admin Login</h1>
+                <div class="flex wrap">
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="username"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="header-text-1"
+                        />
+                        <label for="username" class="form__label"
+                            >Tài khoản</label
+                        >
+                    </div>
+                    <div class="form__group field">
+                        <input
+                            type="password"
+                            class="form__field"
+                            placeholder="Name"
+                            name="name"
+                            id="password"
+                            required
+                            autocomplete="off"
+                            list="autocompleteOff"
+                            page-id="header-text-1"
+                        />
+                        <label for="password" class="form__label"
+                            >Mật khẩu</label
+                        >
+                    </div>
+                    <button class="btn shadow-37" id="login">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/toastify-js"
+        ></script>
+        <script src="./app.js" async defer></script>
+    </body>
+</html>

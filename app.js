@@ -1,9 +1,16 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const https = require('https');
+const path = require('path');
 const fs = require('fs');
+const cookieParser = require("cookie-parser");
 const multer = require('multer');
 const { log, error } = require('./utils/logger');
+const { hash, compare } = require('./utils/bcrypt');
+const { sign, verify } = require('./utils/jwt');
+const message = require('./utils/message');
 
 const privateKey = fs.readFileSync('sslcert/server.key', 'utf8');
 const certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
@@ -15,7 +22,31 @@ const DataStore = require('nedb');
 const db = {};
 
 db.page = new DataStore('./db/page.db');
-db.page.loadDatabase();
+db.page.loadDatabase((err) => {
+    if (err)
+        return error(err);
+    log('loaded db.page');
+});
+
+db.user = new DataStore('./db/user.db');
+db.user.loadDatabase((err) => {
+    if (err)
+        return error(err);
+    log('loaded db.user');
+
+    db.user.findOne({ username: 'admin' }, (err, user) => {
+        if (user) return;
+        hash(process.env.DEFAULT_PASSWORD)
+            .then((hashed) => {
+                db.user.insert({ username: 'admin', password: hashed }, (err, user) => {
+                    log(`db.user - ${JSON.stringify(user)}`);
+                })
+            })
+    })
+});
+
+app.use(express.json());
+app.use(cookieParser());
 
 app.use(function (req, res, next) {
     log(req.method + ' ' + req.originalUrl);
@@ -23,9 +54,6 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "*");
     next();
 });
-
-app.use(express.json());
-app.use('/admin', express.static('public/admin'));
 
 const image = multer({
     dest: 'images/',
@@ -43,7 +71,7 @@ app.get('/', (req, res) => {
     res.status(500).json({
         code: 500,
         data: {
-            message: 'internal server error'
+            message: message.INTERNAL_ERROR
         }
     });
 });
@@ -86,17 +114,96 @@ app.get('/api/page', (req, res) => {
     })
 })
 
-app.use((req, res, next) => {
-    const token = req.headers.authorization;
-    if (token == '123') {
-        return next();
-    }
-    return res.status(403).json({
-        code: 400,
-        data: {
-            message: 'unauthorized'
+app.post('/api/login', (req, res) => {
+    const { username, password } = req.body;
+
+    db.user.findOne({ username: username }, (err, user) => {
+        if (err)
+            return res.status(500).json({
+                code: 500,
+                data: {
+                    message: message.INTERNAL_ERROR
+                }
+            })
+        else if (user) {
+            const hash = user.password;
+            compare(password, hash)
+                .then((result) => {
+                    if (result) {
+                        sign({ username })
+                            .then((token) => {
+                                return res.json({
+                                    code: 200,
+                                    data: {
+                                        message: message.LOGIN_SUCCESS,
+                                        token: token
+                                    }
+                                })
+                            })
+                    } else {
+                        return res.json({
+                            code: 400,
+                            data: {
+                                message: message.WRONG_USER
+                            }
+                        })
+                    }
+                })
+        } else {
+            return res.json({
+                code: 400,
+                data: {
+                    message: message.WRONG_USER
+                }
+            })
         }
-    });
+    })
+});
+
+app.use('/login', (req, res, next) => {
+    const { admin_token } = req.cookies;
+
+    verify(admin_token)
+        .then(() => {
+            res.redirect('/admin');
+        }).catch(() => {
+            next();
+        })
+})
+app.use('/login', express.static(path.join(__dirname, 'public/login')));
+app.use('/admin', (req, res, next) => {
+    const { admin_token } = req.cookies;
+
+    verify(admin_token)
+        .then(() => {
+            next();
+        }).catch(() => {
+            return res.status(403).json({
+                code: 400,
+                data: {
+                    message: message.NOT_FOUND
+                }
+            });
+        })
+})
+app.use('/admin', express.static(path.join(__dirname, 'public/admin')));
+
+app.use((req, res, next) => {
+    const { admin_token } = req.cookies;
+
+    log('Token: ' + admin_token);
+
+    verify(admin_token)
+        .then(() => {
+            next();
+        }).catch(() => {
+            return res.status(403).json({
+                code: 400,
+                data: {
+                    message: message.NOT_FOUND
+                }
+            });
+        })
 });
 
 app.post('/api/page/image', image.single('image'), (req, res) => {
@@ -109,16 +216,16 @@ app.post('/api/page/image', image.single('image'), (req, res) => {
             db.page.insert({ ...file, page_id, is_remove: false }, (err, doc) => {
                 if (err) {
                     return res.json({
-                        code: 200,
+                        code: 400,
                         data: {
-                            message: 'image write failed',
+                            message: message.UPLOAD_FAIL,
                         }
                     });
                 } else {
                     res.json({
                         code: 200,
                         data: {
-                            message: 'write image success',
+                            message: message.UPLOAD_SUCCESS,
                         }
                     })
                 }
@@ -128,7 +235,7 @@ app.post('/api/page/image', image.single('image'), (req, res) => {
         res.json({
             code: 400,
             data: {
-                message: 'Missing field <page_id>',
+                message: message.MISSING_PAGE_ID,
             }
         })
     }
@@ -144,16 +251,16 @@ app.post('/api/page/video', video.single('video'), (req, res) => {
             db.page.insert({ ...file, page_id, is_remove: false }, (err, doc) => {
                 if (err) {
                     return res.json({
-                        code: 200,
+                        code: 400,
                         data: {
-                            message: 'video write failed',
+                            message: message.UPLOAD_FAIL,
                         }
                     });
                 } else {
                     res.json({
                         code: 200,
                         data: {
-                            message: 'video write success',
+                            message: message.UPLOAD_SUCCESS,
                         }
                     })
                 }
@@ -163,7 +270,7 @@ app.post('/api/page/video', video.single('video'), (req, res) => {
         res.json({
             code: 400,
             data: {
-                message: 'Missing field <page_id>',
+                message: message.MISSING_PAGE_ID,
             }
         })
     }
@@ -176,7 +283,7 @@ app.post('/api/page/text', (req, res) => {
         return res.json({
             code: 400,
             data: {
-                message: '<saveStack> must be Array',
+                message: message.INVALID_DATA_TYPE,
             }
         });
     }
@@ -194,7 +301,7 @@ app.post('/api/page/text', (req, res) => {
     return res.json({
         code: 200,
         data: {
-            message: 'update text fields successfully'
+            message: message.UPLOAD_SUCCESS
         }
     })
 })
@@ -204,7 +311,7 @@ const uploadGallery = image.array('images');
 app.post('/api/page/images', (req, res, next) => {
     uploadGallery(req, res, function (err) {
         if (err) {
-            return res.status(400).send({ message: err.message })
+            return res.status(400).send({ message: message.UPLOAD_FAIL })
         }
         const files = req.files;
         const { page_id } = req.body;
@@ -215,7 +322,7 @@ app.post('/api/page/images', (req, res, next) => {
                     return res.status(200).json({
                         code: 200,
                         data: {
-                            message: 'upload success',
+                            message: message.UPLOAD_SUCCESS,
                             files: files,
                         }
                     })
@@ -225,7 +332,7 @@ app.post('/api/page/images', (req, res, next) => {
                     return res.status(200).json({
                         code: 200,
                         data: {
-                            message: 'upload success',
+                            message: message.UPLOAD_SUCCESS,
                             files: files,
                         }
                     })
@@ -256,7 +363,7 @@ app.delete('/api/page/images', (req, res) => {
             return res.json({
                 code: 200,
                 data: {
-                    message: 'no file matching',
+                    message: message.NOT_FOUND,
                 }
             })
         }
@@ -274,10 +381,12 @@ app.use((err, req, res, next) => {
         return res.status(500).send({
             code: 500,
             data: {
-                message: 'internal server error'
+                message: message.INTERNAL_ERROR
             }
         })
 })
 
 const httpsServer = https.createServer(credentials, app);
-httpsServer.listen(443);
+httpsServer.listen(process.env.HTTPS_PORT, () => {
+    log('server start at ' + process.env.HTTPS_PORT);
+});
