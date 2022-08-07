@@ -25,7 +25,9 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.json());
-app.use('/admin', express.static('public/admin'));
+app.use('/admin', (req, res) => {
+    res.send('hello world');
+});
 
 const image = multer({
     dest: 'images/',
