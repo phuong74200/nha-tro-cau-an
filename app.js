@@ -23,7 +23,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/admin', express.static('public'));
+app.use('/admin', express.static('public/admin'));
 app.use(express.json());
 
 const image = multer({
