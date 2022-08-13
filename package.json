@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon app",
-    "start:background": "pm2 start ecosystem.config.json"
+    "start:background": "pm2 start ecosystem.dev.config.json"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
